@@ -152,15 +152,15 @@ function horribleGlobalClosure() {
   }
   let paused = false;
   let step = 4;
-  var esperandoRepollo = false;
-  function main(objects) {
-    draw(objects);
-    physics(objects);
-    cleanup(objects);
-    if (objects.length ===  0 && !esperandoRepollo) {
-      esperandoRepollo = true;
-      setTimeout(
-        function()
+    var esperandoRepollo = false;
+    function main(objects) {
+      draw(objects);
+      physics(objects);
+      cleanup(objects);
+      if (objects.length ===  0 && !esperandoRepollo) {
+        esperandoRepollo = true;
+        setTimeout(
+        function(){
          objects.push(new Tree(step++));
          esperandoRepollo = false;
         },
